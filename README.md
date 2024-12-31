@@ -1,4 +1,4 @@
 ## just draw it
 
 
-![](./screenshoot.png)
+![](https://github.com/ajn404/just-draw-it/blob/main/screenshoot.png)
