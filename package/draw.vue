@@ -40,12 +40,12 @@
             </div>
             <div class="submit">
                 <label>公司名称:</label>
-                <input v-model="company" placeholder="输入公司名称" />
+                <input v-model="company" placeholder="输入公司名称"  />
                 <template v-if="drawingMode === 'unit' && currentAreaName">
                     <label class="grid-column-1">所属区域: {{ currentAreaName }}</label>
                 </template>
                 <label>{{ drawingMode === 'area' ? '区域名称:' : '单元名称:' }}</label>
-                <Input required v-model:value="polygonName" @change="drawChart"
+                <input required v-model="polygonName" @change="drawChart"
                     :placeholder="`输入${drawingMode === 'area' ? '区域' : '单元'}名称`" />
                 <label>{{ drawingMode === 'area' ? '区域颜色:' : '单元颜色:' }}</label>
                 <div class="color-picker">
@@ -95,6 +95,15 @@
 import { ref, onMounted, computed, onUnmounted, watch } from 'vue';
 import './draw.css'
 import * as d3 from 'd3';
+
+const message = (title) => {
+    Notification.requestPermission().then((permission) => {
+        // 如果用户接受，我们就创建一个通知
+        if (permission === "granted") {
+            const notification = new Notification(title);
+        }
+    });
+}
 
 
 const MockShape = []
@@ -178,7 +187,7 @@ const togglePolygonSelection = (index, event, type) => {
 
     // 如果当前正在绘制新图形，提示用户先保存或清除当前图形
     if (points.value.length > 0) {
-        JE.message('请先保存或清除当前正在绘制的图形');
+        message('请先保存或清除当前正在绘制的图形');
         return;
     }
 
@@ -618,12 +627,12 @@ const redo = () => {
 // Save shapes to local storage
 const saveShapes = () => {
     if (!company.value) {
-        JE.message('请选择公司！');
+        message('请选择公司！');
         return;
     }
 
     if (!polygonName.value) {
-        JE.message('请输入多形名称！');
+        message('请输入多形名称！');
         return;
     }
 
@@ -645,7 +654,7 @@ const saveShapes = () => {
     } else {
         // 保存新图形
         if (points.value.length < 3) {
-            JE.message('请至少绘制三个点！');
+            message('请至少绘制三个点！');
             return;
         }
 
@@ -679,7 +688,7 @@ const saveShapes = () => {
     selectedPolygons.value.clear();
 
     drawChart();
-    JE.message('保存成功!');
+    message('保存成功!');
 };
 
 // Clear all shapes and reset
@@ -1049,7 +1058,7 @@ const handleContextMenu = (event, polygon) => {
         selectedPolygons.value.clear();
         // 重新绘制
         drawChart();
-        JE.message('已进入单元模式');
+        message('已进入单元模式');
     }
 };
 
