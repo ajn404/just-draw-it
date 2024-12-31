@@ -1,9 +1,10 @@
 {
+  "author": "ajn404",
+  "license": "MIT",
   "type": "module",
-  "name": "my-component",
-  "version": "0.0.1",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "name": "just-draw-it",
+  "version": "0.0.3",
+  "main": "lib/just-draw-it.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build"
@@ -27,5 +28,9 @@
     "vite": "^4.3.3",
     "vite-plugin-dts": "^2.3.0",
     "vue-tsc": "^1.6.0"
-  }
+  },
+  "files": [
+    "lib",
+    "screenshoot.png"
+  ]
 }

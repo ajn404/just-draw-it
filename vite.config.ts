@@ -7,7 +7,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: 'package/index.tsx',
-      name: 'custom-component'
+      name: 'just-draw-it'
     },
     rollupOptions: {
       external: ['vue'],
