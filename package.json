@@ -3,11 +3,13 @@
   "license": "MIT",
   "type": "module",
   "name": "just-draw-it",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "lib/just-draw-it.js",
+  "url": "https://github.com/ajn404/just-draw-it",
   "scripts": {
     "dev": "vite",
-    "build": "vite build"
+    "build": "vite build",
+    "build:example": "vite build --config vite.example.config.ts"
   },
   "dependencies": {
     "d3": "^7.9.0",
