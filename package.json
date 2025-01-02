@@ -3,7 +3,7 @@
   "license": "MIT",
   "type": "module",
   "name": "just-draw-it",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "lib/just-draw-it.js",
   "scripts": {
     "dev": "vite",
@@ -15,6 +15,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.21.4",
+    "@types/d3": "^7.4.3",
     "@types/vue": "^2.0.0",
     "@vitejs/plugin-vue": "^4.2.1",
     "@vitejs/plugin-vue-jsx": "^3.0.1",
@@ -30,7 +31,6 @@
     "vue-tsc": "^1.6.0"
   },
   "files": [
-    "lib",
-    "screenshoot.png"
+    "lib"
   ]
 }

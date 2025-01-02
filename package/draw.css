@@ -1,6 +1,5 @@
 
 .view-div {
-  margin: 100px 20px 0 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -20,10 +19,9 @@
 .container {
   overflow: auto;
   display: flex;
-  height:90vh;
+  height:100vh;
 }
 .chart-container {
-  margin: 20px 5px;
   background-color: #f5f5f5;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
