@@ -3,9 +3,19 @@
   "license": "MIT",
   "type": "module",
   "name": "just-draw-it",
-  "version": "0.0.5",
+  "version": "0.0.7",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajn404/just-draw-it.git"
+  },
+  "homepage": "https://ajn404.github.io/just-draw-it/",
+  "keywords": [
+    "d3",
+    "vue",
+    "chart",
+    "visualization"
+  ],
   "main": "lib/just-draw-it.js",
-  "url": "https://github.com/ajn404/just-draw-it",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -27,6 +37,7 @@
     "eslint": "^8.39.0",
     "eslint-plugin-vue": "^9.11.0",
     "prettier": "^2.8.8",
+    "terser": "5",
     "typescript": "^5.0.4",
     "vite": "^4.3.3",
     "vite-plugin-dts": "^2.3.0",
