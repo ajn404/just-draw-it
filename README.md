@@ -1,3 +1,6 @@
+## describe
+
+just-draw-it is a simple vue3 component library, which can draw graph in svg (not in canvas)
 
 ## just draw it
 
@@ -45,4 +48,12 @@ import 'just-draw-it/lib/style.css'
   <my-component />
 </template>
 
+```
+
+## props
+
+- readonly
+
+```vue
+<my-component :readonly="true" />
 ```

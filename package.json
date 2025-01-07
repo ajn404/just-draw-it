@@ -3,7 +3,7 @@
   "license": "MIT",
   "type": "module",
   "name": "just-draw-it",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ajn404/just-draw-it.git"
